@@ -1,3 +1,11 @@
+Here is the updated `index.html` file. I have:
+
+1.  **Updated the `images` array** to include all the image files you uploaded.
+2.  **Enhanced the `formatTitle` function** to correctly strip prefixes like `generated_image_` and `image_` in addition to `Gemini_Generated_Image_`, ensuring the titles look cleaner.
+
+You can save the code below as `index.html`.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,16 +69,30 @@
     <script>
         // List of image filenames uploaded by the user
         const images = [
-            "Gemini_Generated_Image_lapweolapweolapw.png",
             "Gemini_Generated_Image_1wwqla1wwqla1wwq_original.jpg",
-            "Gemini_Generated_Image_1wwqla1wwqla1wwq.png",
-            // Removed: Gemini_Generated_Image_ewmn2vewmn2vewmn_original.jpg
-            // Removed: Gemini_Generated_Image_ewmn2vewmn2vewmn.png
-            "Gemini_Generated_Image_5oc8x95oc8x95oc8.png",
-            "Gemini_Generated_Image_1j9gi51j9gi51j9g.png",
+            "Gemini_Generated_Image_n2ebwn2ebwn2ebwn.png",
+            "Gemini_Generated_Image_sezflssezflssezf.png",
             "Gemini_Generated_Image_u4oncbu4oncbu4on.png",
+            "generated_image_31baf21a-4fd8-48cb-86ff-da37f229eabb.png",
+            "Gemini_Generated_Image_1wwqla1wwqla1wwq.png",
+            "Gemini_Generated_Image_5oc8x95oc8x95oc8.png",
+            "image_1764162182167991.png",
+            "generated_image_e9264d8c-85e7-4f74-8633-fd6cac9380ac.png",
+            "generated_image_bcfdf760-24ff-41ba-ace8-8b2589e31f00.png",
+            "generated_image_8950eeee-ecfd-4489-af75-c4039138bced.png",
+            "generated_image_86239243-cae2-4114-beae-e5a15913e1c4.png",
+            "generated_image_831b3b76-c6e9-4a48-a146-f36317b219f8.png",
+            "generated_image_68029c8a-b4d4-4e9b-b964-ef061b608300.png",
+            "generated_image_16c5eeb6-5147-4d0e-87c3-9c63dfc98652.png",
+            "generated_image_2a70c2cc-fde5-419f-b6e7-74618d27d82e.png",
+            "Gemini_Generated_Image_rueogurueogurueo.png",
+            "Gemini_Generated_Image_lapweolapweolapw.png",
+            "Gemini_Generated_Image_bpgtv7bpgtv7bpgt2.png",
+            "Gemini_Generated_Image_bpgtv7bpgtv7bpgt.png",
+            "Gemini_Generated_Image_99smuj99smuj99sm.png",
             "Gemini_Generated_Image_8464z8464z8464z8.png",
-            "Gemini_Generated_Image_ilk6y0ilk6y0ilk6.png"
+            "Gemini_Generated_Image_1j9gi51j9gi51j9g.png",
+            "Gemini_Generated_Image_ilk6y0ilk6y0ilk6.png",
         ];
 
         const galleryGrid = document.getElementById('gallery-grid');
@@ -79,7 +101,7 @@
         function formatTitle(filename) {
             // Remove extension and common prefixes
             let name = filename.replace(/\.(jpg|jpeg|png|gif)$/i, '');
-            name = name.replace('Gemini_Generated_Image_', '');
+            name = name.replace(/^(Gemini_Generated_Image_|generated_image_|image_)/, '');
             // Remove random strings if they look like IDs (simple heuristic: long alphanumeric)
             // For this specific set, let's just truncate or use a placeholder if it's gibberish
             // Or just return the cleaned ID as a "Project Code"
@@ -161,3 +183,6 @@
 
 </body>
 </html>
+```
+
+Is there anything else you'd like to adjust in the gallery layout or functionality for the Nano Banana project?
